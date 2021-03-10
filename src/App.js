@@ -1,4 +1,7 @@
 import React from "react";
+import Hobbies from "./Hobbies";
+import Bio from "./Bio"
+import Schedule from "./Schedule"
 
 function App() {
   const name = "Kitty Kat";
@@ -16,7 +19,11 @@ function App() {
     { time: "7:00 pm", description: "play" },
     { time: "10:00 pm", description: "bedtime" },
   ];
-  return null;
+  return (<div>
+    <Bio name={name} bD={birthday} image={imageSrc}/>
+    <Hobbies hobbyList={hobbies}/>
+    <Schedule dayList={dailyActivities}/>
+  </div>)
 }
 
 export default App;
